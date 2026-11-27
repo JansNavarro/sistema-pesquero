@@ -1,1 +1,23 @@
-<p>custom-input works!</p>
+<div class="container-input">
+    <div class="label">
+        <label>{{label()}}</label>
+        <span>*</span>
+    </div>
+    <div class="input">
+        <input
+            [placeholder]="placeholder()"
+            [type]="type()"
+            [value]="value()"
+            [disabled]="disabled()"
+
+            (input)="onInput($event)"
+            (blur)="onBlur()"
+        
+        >
+        @if (showError() && messageError()) {
+            <div class="error-input">
+                <span>{{messageError()}}</span>
+            </div>
+        }
+    </div>
+</div>
