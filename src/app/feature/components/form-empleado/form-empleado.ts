@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form-empleado',
@@ -9,6 +9,11 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 })
 export class FormEmpleado {
   private fb = inject(FormBuilder);
+
+
+  formEmpleado = this.fb.nonNullable.group({
+    name: ['', [Validators.required]]
+  })
 
 
 
