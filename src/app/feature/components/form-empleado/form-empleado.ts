@@ -42,11 +42,6 @@ export class FormEmpleado {
         return 'Campo invalido'
     }
 
-
-
-
-
-
   }
 
 
